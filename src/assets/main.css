@@ -1,0 +1,153 @@
+@import './base.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#app {
+  max-width: 810px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-weight: normal;
+  white-space: nowrap;
+}
+
+*{
+  font-family: Inter, "Noto Sans JP", serif;
+}
+
+.fadeUp {
+  animation-name: fadeUpAnime;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@keyframes fadeUpAnime {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.fadeIn {
+  animation-name: fadeInAnime;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@keyframes fadeInAnime {
+  from {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fadeCenter{
+  animation: fadeCenter 0.5s;
+}
+
+@keyframes fadeCenter {
+  0% {
+     opacity: 0;
+  }
+  100% {
+     opacity: 1;
+  }
+}
+
+.dots {
+  width: 56px;
+  height: 26.9px;
+  background: radial-gradient(circle closest-side,#fff 90%,#0000) 0%   50%,
+         radial-gradient(circle closest-side,#fff 90%,#0000) 50%  50%,
+         radial-gradient(circle closest-side,#fff 90%,#0000) 100% 50%;
+  background-size: calc(100%/3) 13.4px;
+  background-repeat: no-repeat;
+  animation: dots-7ar3yq 1s infinite linear;
+}
+
+@keyframes dots-7ar3yq {
+  20% {
+     background-position: 0%   0%, 50%  50%,100%  50%;
+  }
+
+  40% {
+     background-position: 0% 100%, 50%   0%,100%  50%;
+  }
+
+  60% {
+     background-position: 0%  50%, 50% 100%,100%   0%;
+  }
+
+  80% {
+     background-position: 0%  50%, 50%  50%,100% 100%;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.cd__main{
+   background: #05051a !important;
+  display: grid !important;
+   grid-template-columns: 1fr 1fr;
+  place-items: center;
+  max-width: 480px !important;
+}
+body {
+  min-height: 100vh;
+  margin: 0 auto;
+  background-color: #131110;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  place-items: center;
+}
+
+.wrapper {
+  position: relative;
+}
+
+input[type=range] {
+  -webkit-appearance: none;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 3.5rem;
+  /*transform: translate(-50%, -50%) rotate(-90deg);*/
+  border-radius: 1rem;
+  overflow: hidden;
+  cursor: row-resize;
+}
+input[type=range][step] {
+  background-color: transparent;
+  background-image: repeating-linear-gradient(to right, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2) calc(10% - 1px), #05051a 10%);
+}
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 10px;
+  height: 100px;
+  background: rgba(255, 255, 255, 0.6);
+  box-shadow: -100rem 0 0 100rem rgba(255, 255, 255, 0.6);
+  border-radius: 1rem !important;
+}
+input[type=range]::-moz-range-thumb {
+  /*border: none;
+  width: 0;
+  box-shadow: -20rem 0 0 20rem rgba(255, 255, 255, 0.6);
+  border-radius: 1rem !important;*/
+}
